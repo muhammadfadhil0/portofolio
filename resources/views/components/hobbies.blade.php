@@ -1,4 +1,4 @@
-        <section class="mb-16 px-6 md:px-0">
+        <section class="mb-16 px-6 md:px-5">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-bold text-white mb-2">I like building things</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">

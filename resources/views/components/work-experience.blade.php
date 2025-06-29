@@ -1,5 +1,5 @@
 <!-- Work Experience Section -->
-<section class="mb-16 px-6 md:px-0 ">
+<section class="mb-16 px-6 md:px-5 ">
     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Work Experience</h2>
 
     <div class="space-y-4">
@@ -8,9 +8,17 @@
                 <div
                     class="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                     <div class="flex items-center space-x-4">
-                        <div
-                            class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-sm"></i>
+                        <div class="w-10 h-10   rounded-lg flex items-center justify-center flex-shrink-0">
+                            @if (isset($work['logo']))
+                                <img src="{{ $work['logo'] }}" alt="{{ $work['company'] }} logo"
+                                    class="w-8 h-8 object-contain bg-white rounded p-1">
+                            @else
+                                <div
+                                    class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+
+                                </div>
+                                <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-sm"></i>
+                            @endif
                         </div>
                         <div>
                             <h3 class="font-semibold text-gray-900 dark:text-white">{{ $work['title'] }}</h3>
@@ -35,6 +43,13 @@
                                 <li>• {{ $achievement }}</li>
                             @endforeach
                         </ul>
+                        @if (isset($work['link']) && !empty($work['link']))
+                            <a href="{{ $work['link'] }}" target="_blank"
+                                class="inline-flex items-center text-blue-500 hover:underline text-sm mt-3">
+                                <i class="fa-solid fa-globe mr-1"></i>
+                                Website
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>

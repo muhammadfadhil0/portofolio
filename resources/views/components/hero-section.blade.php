@@ -12,7 +12,7 @@
     <!-- Content Area -->
     <div class="pt-4 px-6">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Halo, saya {{ config('portofolio.personal.name') }} 👋
+            Halo, I'm {{ config('portofolio.personal.name') }} 👋
         </h1>
         <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
             {{ config('portofolio.personal.title') }}

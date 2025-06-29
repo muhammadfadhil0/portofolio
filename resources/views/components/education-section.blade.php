@@ -1,4 +1,4 @@
-        <section class="mb-16 px-6 md:px-0">
+        <section class="mb-16 px-6 md:px-5">
             <h2 class="text-2xl font-bold text-white mb-6">Education</h2>
 
             <div class="space-y-4">
@@ -7,9 +7,16 @@
                         <div
                             class="flex items-center justify-between p-4 rounded-lg hover:bg-gray-800 transition-colors">
                             <div class="flex items-center space-x-4">
-                                <div
-                                    class="w-10 h-10 bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-graduation-cap text-green-400 text-sm"></i>
+                                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    @if (isset($education['logo']))
+                                        <img src="{{ $education['logo'] }}" alt="{{ $education['institution'] }} logo"
+                                            class="w-8 h-8 object-contain bg-white rounded p-1">
+                                    @else
+                                        <div
+                                            class="bg-green-900 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-briefcase text-green-400 text-sm"></i>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-white">{{ $education['degree'] }}</h3>
@@ -35,6 +42,13 @@
                                         <li>• {{ $achievement }}</li>
                                     @endforeach
                                 </ul>
+                                @if (isset($education['link']) && !empty($education['link']))
+                                    <a href="{{ $education['link'] }}" target="_blank"
+                                        class="inline-flex items-center text-blue-500 hover:underline text-sm mt-3">
+                                        <i class="fa-solid fa-globe mr-1"></i>
+                                        Website
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
