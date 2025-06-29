@@ -16,6 +16,8 @@
         rel="stylesheet">
     {{-- alpine js --}}
     <script src="//unpkg.com/alpinejs" defer></script>
+    {{-- tabler --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
 <style>
@@ -32,18 +34,12 @@
             <a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors p-2">
                 <i class="fas fa-home text-lg"></i>
             </a>
-            <a href="https://instagram.com" target="_blank"
-                class="text-gray-300 hover:text-pink-400 transition-colors p-2">
-                <i class="fab fa-instagram text-lg"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank"
-                class="text-gray-300 hover:text-blue-400 transition-colors p-2">
-                <i class="fab fa-linkedin text-lg"></i>
-            </a>
-            <a href="https://github.com" target="_blank"
-                class="text-gray-300 hover:text-gray-400 transition-colors p-2">
-                <i class="fab fa-github text-lg"></i>
-            </a>
+            @foreach (config('portofolio.navigation') as $index => $nav)
+                <a href="{{ $nav['link'] }}" target="_blank"
+                    class="text-gray-300 {{ $nav['hover_color'] }} transition-colors p-2">
+                    <i class="{{ $nav['platform_icon'] }} text-lg"></i>
+                </a>
+            @endforeach
         </div>
     </nav>
 

@@ -77,5 +77,20 @@ return [
     'social' => [
         'instagram' => 'https://instagram.com',
         'linkedin' => 'https://linkedin.com'
+    ],
+
+    'navigation' => [
+        [
+            'platform_name' => 'Instagram',
+            'platform_icon' => 'fab fa-instagram',
+            'hover_color' => 'hover:text-pink-500',
+            'link' => 'https://instagram.com'
+        ],
+        [
+            'platform_name' => 'Linkedin',
+            'platform_icon' => 'fab fa-linkedin',
+            'hover_color' => 'hover:text-blue-500',
+            'link' => 'https://instagram.com'
+        ]
     ]
 ];
