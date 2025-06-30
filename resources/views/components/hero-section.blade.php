@@ -1,4 +1,4 @@
-<section id="home" class="mb-16 border-b-1 border-gray-600">
+<section id="home" class="mb-20 border-b-1 border-gray-600">
     <!-- Cover Background -->
     <img src="{{ config('portofolio.personal.background_photo') }}" alt="Cover Background"
         class="relative h-48 md:h-64 w-full object-cover rounded-t-lg">
@@ -6,7 +6,7 @@
     <!-- Profile Photo - Outside cover, overlapping -->
     <div class="relative -mt-12 md:-mt-16 ml-6 z-20">
         <img src="{{ config('portofolio.personal.photo') }}" alt="Profile"
-            class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg">
+            class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg object-cover">
     </div>
 
     <!-- Content Area -->
@@ -22,6 +22,25 @@
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
                 {{ config('portofolio.personal.about') }}
             </p>
+        </div>
+        <div class="mb-8">
+            @if (config('portofolio.personal.resume_link'))
+                <button>
+                    <a href="{{ config('portofolio.personal.resume_link') }}"
+                        class="border-2 ti ti-circle-arrow-down border-white-100 rounded-full text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                        Download CV
+                    </a>
+                </button>
+            @endif
+
+            @if (config('portofolio.personal.location_link'))
+                <button class="mt-5 md:mt-0">
+                    <a href="{{ config('portofolio.personal.location_link') }}" target="_blank"
+                        class="border-2 ti ti-location border-white-100 rounded-full text-white px-4 py-2 hover:bg-blue-700 transition-colors md:ml-4">
+                        {{ config('portofolio.personal.location') }}
+                    </a>
+                </button>
+            @endif
         </div>
     </div>
 </section>

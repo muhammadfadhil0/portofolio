@@ -37,11 +37,14 @@
                                 <p class="text-gray-300 text-sm mb-3">
                                     {{ $education['description'] }}
                                 </p>
-                                <ul class="text-gray-300 text-sm space-y-1">
-                                    @foreach ($education['achievements'] as $achievement)
-                                        <li>• {{ $achievement }}</li>
-                                    @endforeach
-                                </ul>
+                                @if (config('portofolio.education.achievements'))
+                                    <ul class="text-gray-300 text-sm space-y-1">
+                                        @foreach ($education['achievements'] as $achievement)
+                                            <li>• {{ $achievement }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+
                                 @if (isset($education['link']) && !empty($education['link']))
                                     <a href="{{ $education['link'] }}" target="_blank"
                                         class="inline-flex items-center text-blue-500 hover:underline text-sm mt-3">

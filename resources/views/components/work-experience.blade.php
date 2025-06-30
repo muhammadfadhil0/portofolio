@@ -15,9 +15,8 @@
                             @else
                                 <div
                                     class="bg-blue-100 dark:bg-blue-900 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-
+                                    <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-sm"></i>
                                 </div>
-                                <i class="fas fa-briefcase text-blue-600 dark:text-blue-400 text-sm"></i>
                             @endif
                         </div>
                         <div>
@@ -38,11 +37,13 @@
                         <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">
                             {{ $work['description'] }}
                         </p>
-                        <ul class="text-gray-600 dark:text-gray-300 text-sm space-y-1">
-                            @foreach ($work['achievements'] as $achievement)
-                                <li>• {{ $achievement }}</li>
-                            @endforeach
-                        </ul>
+                        @if (config('portofolio.work_experience.achievements'))
+                            <ul class="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                                @foreach ($work['achievements'] as $achievement)
+                                    <li>• {{ $achievement }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                         @if (isset($work['link']) && !empty($work['link']))
                             <a href="{{ $work['link'] }}" target="_blank"
                                 class="inline-flex items-center text-blue-500 hover:underline text-sm mt-3">
