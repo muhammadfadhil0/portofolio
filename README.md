@@ -2,6 +2,8 @@
 
 Sebuah template portfolio modern yang dibangun dengan Laravel. Template ini siap dan boleh kalian pakai.
 
+![Screenshot](img/ss.png)
+
 ## Konfigurasi
 
 Untuk mengubah data portfolio, edit file `config/portofolio.php`. Tidak memerlukan database karena semua konfigurasi disimpan dalam file PHP.
