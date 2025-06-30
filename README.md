@@ -1,6 +1,6 @@
 # Laravel Portfolio
 
-Sebuah template portfolio modern yang dibangun dengan Laravel. Template ini siap dan boleh kalian pakai.
+Sebuah template portfolio sederhana yang dibangun dengan Laravel.
 
 ![Screenshot](ss.png)
 
@@ -28,9 +28,11 @@ Template ini menggunakan sistem component yang terpisah untuk setiap bagian UI, 
 -   `resources/views/components/project-section.blade.php` - Section portfolio/karya
 -   `resources/views/components/contact.blade.php` - Section kontak
 
+dan semua ini tergabung di dalam file `portofolio.blade.php`
+
 ## Tutorial Deploy Laravel ke Shared Hosting (AeonFree)
 
-Jika Anda ingin coba untuk deploy website kalian ke dalam web hosting, akan saya bantu untuk tutorialnya. Sebenarnya paling tepat jika Anda deploy VPS atau penyedia seperti railway, dan lain sebagainya.
+Jika Anda ingin coba untuk deploy website kalian ke dalam web hosting, akan saya bantu untuk tutorialnya. Saya sarankan untuk deploy menggunakan VPS atau penyedia seperti railway, dan lain sebagainya.
 
 ### Persiapan
 
