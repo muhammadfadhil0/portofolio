@@ -20,12 +20,11 @@ return [
 
 Template ini menggunakan sistem component yang terpisah untuk setiap bagian UI, bisa di lihat di dalam `resources/views/components`:
 
--   `resources/views/components/education-section.blade.php` - Header dan navigasi
+-   `resources/views/components/education-section.blade.php` - Riwayat pendidikan
 -   `resources/views/components/hero-section.blade.php` - Section hero/banner
 -   `resources/views/components/work-experience.blade.php` - Section riwayat pekerjaan
 -   `resources/views/components/project-section.blade.php` - Section portfolio/karya
 -   `resources/views/components/contact.blade.php` - Section kontak
--   `resources/views/components/footer.blade.php` - Footer
 
 ## Tutorial Deploy Laravel ke Shared Hosting (AeonFree)
 
