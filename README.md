@@ -2,7 +2,7 @@
 
 Sebuah template portfolio modern yang dibangun dengan Laravel. Template ini siap dan boleh kalian pakai.
 
-![Screenshot](img/ss.png)
+![Screenshot](ss.png)
 
 ## Konfigurasi
 
