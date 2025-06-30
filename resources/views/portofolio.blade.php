@@ -30,7 +30,8 @@
 
     <!-- Floating Navigation Bar -->
     <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-        <div class="bg-gray-800 rounded-full shadow-lg p-3 flex items-center space-x-3 border border-gray-700">
+        <div
+            class="bg-gray-800/20 backdrop-blur-md rounded-full shadow-lg p-3 flex items-center space-x-3 border border-gray-700/30">
             <a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors p-2">
                 <i class="fas fa-home text-lg"></i>
             </a>
