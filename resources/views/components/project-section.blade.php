@@ -28,26 +28,27 @@
                                 <p class="text-gray-300 text-sm mb-3">
                                     {{ $project['description'] }}
                                 </p>
-                                <div class="flex flex-wrap gap-1 mb-3">
-                                    @foreach ($project['technologies'] as $tech)
-                                        <span
-                                            class="px-2 py-1 bg-blue-900 text-blue-200 rounded text-xs">{{ $tech }}</span>
-                                    @endforeach
-                                </div>
-                                @if (isset($project['link']) && $project['link'])
-                                    <a href="{{ $project['link'] }}" target="_blank"
-                                        class="inline-flex items-center text-blue-400 hover:underline text-sm">
-                                        <i class="fab fa-github mr-1"></i>
-                                        View on GitHub
-                                    </a>
-                                @endif
-                                @if (isset($project['live_demo']) && $project['live_demo'])
-                                    <a href="{{ $project['live_demo'] }}" target="_blank"
-                                        class="inline-flex items-center text-blue-400 hover:underline text-sm ml-3">
-                                        <i class="fas fa-external-link-alt mr-1"></i>
-                                        Live Demo
-                                    </a>
-                                @endif
+                                @if (isset($project['technologies']) && is_array($project['technologies']) && count($project['technologies']) > 0)
+                                    <div class="flex flex-wrap gap-1 mb-3">
+                                        @foreach ($project['technologies'] as $tech)
+                                            <span
+                                                class="px-2 py-1 bg-blue-900 text-blue-200 rounded text-xs">{{ $tech }}</span>
+                                        @endforeach
+                                    </div>
+                                    @endif @if (isset($project['link']) && $project['link'])
+                                        <a href="{{ $project['link'] }}" target="_blank"
+                                            class="inline-flex items-center text-blue-400 hover:underline text-sm">
+                                            <i class="fab fa-github mr-1"></i>
+                                            View on GitHub
+                                        </a>
+                                    @endif
+                                    @if (isset($project['live_demo']) && $project['live_demo'])
+                                        <a href="{{ $project['live_demo'] }}" target="_blank"
+                                            class="inline-flex items-center text-blue-400 hover:underline text-sm ml-3">
+                                            <i class="fas fa-external-link-alt mr-1"></i>
+                                            Live Demo
+                                        </a>
+                                    @endif
                             </div>
                         </div>
                     @endforeach

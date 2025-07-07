@@ -21,8 +21,11 @@ return [
     |--------------------------------------------------------------------------
     */
     'personal' => [
+        // nama lengkapmu
         'name' => 'Your Name',
+        // job title atau profesi
         'title' => 'Your Job Title',
+        // deskripsi singkat tentang dirimu
         'about' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum esse debitis minima inventore veritatis corrupti quod
 dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus commodi dolorem, eligendi odio amet?',
 
@@ -52,6 +55,7 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
         /*
          * Location Settings
          * - Hapus jika tidak diperlukan, tombol lokasi akan disembunyikan
+         * - lokasi link itu adalah link yang akan di arahkan ke lokasimu di Google Maps setelah user klik tombol lokasi
          */
         'location' => 'Surakarta, Indonesia',
         'location_link' => 'https://www.google.com/maps/place/Your+Location',
@@ -66,7 +70,10 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
     */
     'work_experience' => [
         [
+            // Kerja di bidang apa
             'title' => 'Your Job Title',
+            //  Nama perusahaan tempat kamu bekerja
+            // - Jika perusahaan tidak ada, bisa diisi dengan "Freelance" atau "Self-Employed"
             'company' => 'Your Company Name',
 
             /*
@@ -78,7 +85,10 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
              */
             // 'logo' => 'img/smaga.png',
 
+            // Periode kerja
             'period' => 'Sep 2024 - Present',
+            // Deskripsi pekerjaan
+            // Deskripsi ini akan ditampilkan terlipat, baru akan muncul saat user mengklik tombol pekerjaanmu
             'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum esse debitis minima inventore veritatis corrupti quod
 dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus commodi dolorem, eligendi odio amet?',
 
@@ -93,6 +103,8 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
             //     'Successfully delivered 8+ projects on time and within budget'
             // ],
 
+            // Link ke profil perusahaan atau proyek
+            // - Hapus jika tidak ada, tombol link akan disembunyikan
             'link' => 'link-to-github.com/tech-innovation'
         ]
     ],
@@ -106,7 +118,9 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
     */
     'education' => [
         [
+            // Gelar yang diperoleh
             'degree' => 'Your Degree',
+            // Jurusan atau program studi
             'institution' => 'Your Institution Name',
 
             /*
@@ -115,7 +129,10 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
              */
             // 'logo' => 'img/ums.png',
 
+            // Periode pendidikan
             'period' => 'Aug 2020 - Jan 2024',
+            // Deskripsi pendidikan
+            // Deskripsi ini akan ditampilkan terlipat, baru akan muncul saat user mengklik tombol pendidikanmu
             'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum esse debitis minima inventore veritatis corrupti quod
 dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus commodi dolorem, eligendi odio amet?',
 
@@ -130,6 +147,8 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
             //     'Teaching Assistant for Web Programming Course'
             // ],
 
+            // Link ke profil institusi atau proyek
+            // - Hapus jika tidak ada, tombol link akan disembunyikan
             'link' => 'https://ums.ac.id'
         ]
     ],
@@ -144,7 +163,9 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
     */
     'projects' => [
         [
+            // Nama proyek
             'title' => 'Your Project Title',
+            // Deskripsi proyek
             'description' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque?',
 
             /*
@@ -154,16 +175,26 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
              */
             // 'image' => 'img/smagaedu.png',
 
+            /*
+             * Technologies Used
+             * - Daftar teknologi yang digunakan dalam proyek
+             * - Ini akan ditampilkan sebagai badge di bawah deskripsi proyek
+             * - tidak wajib teknologi, kamu bisa menambahkannya ke skill yang kamu gunakan di sana
+             */
             'technologies' => ['PHP', 'Javascript', 'MySQL'],
 
             /*
              * Project Links (Optional)
              * - Uncomment sesuai kebutuhan
              */
-            // 'link' => 'https://github.com/muhammadfadhil0/LMS',
-            'live_demo' => 'https://lms-demo.zya.me/?i=1'
+            // Link ke repositori proyek (GitHub, GitLab, Bitbucket, dll)
+            'link' => '#',
+            // Link ke demo langsung proyek
+            'live_demo' => '#'
         ],
         [
+            // sama kaya di atas, kamu bisa menambahkan beberapa project bebas
+
             'title' => 'Your Project Title 2',
             'description' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque?',
 
@@ -232,9 +263,14 @@ dolores sit velit, excepturi, fugiat laudantium omnis mollitia necessitatibus co
     */
     'navigation' => [
         [
+            // Nama platform sosial media
             'platform_name' => 'Instagram',
+            // Icon platform sosial media menggunakan Font Awesome, buka di google font awesome
             'platform_icon' => 'fab fa-instagram',
+            // efek hover muncul warna, bisa diubah sesuai keinginan
+            // warna yang digunakan adalah warna Tailwind CSS, kamu bisa cek di google tailwind css color
             'hover_color' => 'hover:text-pink-500',
+            // Link ke profil sosial media, pastikan linknya benar
             'link' => '#'
         ],
         [
