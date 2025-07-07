@@ -6,7 +6,7 @@ Sebuah template portfolio sederhana yang dibangun dengan Laravel.
 
 ## Konfigurasi
 
-Untuk mengubah data portfolio, edit file `config/portofolio.php`. Tidak memerlukan database karena semua konfigurasi disimpan dalam file PHP.
+Untuk mengubah data portfolio, edit file `config/portofolio.php`. Tidak memerlukan database karena semua konfigurasi disimpan dalam data array. Rekomendasi saya gunakan Visual Studio Code untuk isi data Anda.
 
 ```php
 // config/portofolio.php
