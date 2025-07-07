@@ -27,17 +27,17 @@
             @if (config('portofolio.personal.resume_link'))
                 <button>
                     <a href="{{ config('portofolio.personal.resume_link') }}"
-                        class="border-2 ti ti-circle-arrow-down border-white-100 rounded-full text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                        Download CV
+                        class="border-2 border-white-100 rounded-full text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                        <span class="ti ti-circle-arrow-down mr-1"></span>Download CV
                     </a>
                 </button>
             @endif
 
             @if (config('portofolio.personal.location_link'))
-                <button class="mt-5 md:mt-0">
+                <button class="mt-6 md:mt-0">
                     <a href="{{ config('portofolio.personal.location_link') }}" target="_blank"
-                        class="border-2 ti ti-location border-white-100 rounded-full text-white px-4 py-2 hover:bg-blue-700 transition-colors md:ml-4">
-                        {{ config('portofolio.personal.location') }}
+                        class="border-2 border-white-100 rounded-full text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                        <span class="ti ti-location mr-1"></span>{{ config('portofolio.personal.location') }}
                     </a>
                 </button>
             @endif
